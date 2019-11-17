@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 
 
-def fan_command(pin_voltage, pin=14):
+def fan_command(pin_voltage, pin=18):
     """
     A function to set the mode and state of a pin in BCM mode.
     Enable and shutdown a fan.
@@ -20,7 +20,5 @@ def fan_command(pin_voltage, pin=14):
     GPIO.output(pin, voltage)
 
 
-if __name__ == "__main__":
-    # Run fan parameter
-    setting_voltage = 'HIGH'
-    fan_command(setting_voltage)
+def get_pollution_rate():
+    return 15
